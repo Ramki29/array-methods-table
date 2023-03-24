@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array of Methods-Table</title>
+    <style>
+        body{
+            width: 95%;
+        }
+        table.contenttable {
+		border-collapse: collapse;
+		border-color: black;
+		width:100%;
+		font-size:20px;
+		}
+		 td  {
+         text-align: center;
+       padding: 8px;
+               }
+        th {
+        padding: 8px;
+	  }	
+	  tr:nth-child(even) {
+    background-color:gray;
+	  }
+	   tr:nth-child(odd) {
+    background-color:aqua;
+	  }
+	  th {
+	  background-color:gold;
+	  }
+        }
+    </style>
+</head>
+
+<body>
+    <table class="contenttable" border="2">
+        <caption>ARRAY OF METHODS</caption>
+        <tr>
+            <th>S.NO</th>
+            <th>METHOD</th>
+            <th>SYNTAX</th>
+            <th>PARAMETERS / INPUT</th>
+            <th>OUTPUT</th>
+            <th>DEFINITION</th>
+        </tr>
+        <tr>
+            <td>1.</td>
+            <td>filter()</td>
+            <td>array.filter(function name);</td>
+            <td>
+               const ages = [32, 33, 16, 40];
+			     let result = ages.filter(function (value) {
+                    return value.ages >= 18;
+                });
+                console.log(result);
+            </td>
+            <td>
+				<br>OUTPUT=><b>[32,33,40]</b></td>
+            <td>Returns array values by filtering elements</td>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>find()</td>
+            <td>array.find(function name);</td>
+            <td>
+                const ages = [3, 10, 18, 20];
+				let res = ages.find(function (value) {
+                return value.ages>18;
+            });
+            console.log(res);
+            </td>
+            <td>
+            <br>OUTPUT=><b>[20]</b></td>
+            <td>Returns first element of array that satisfies a condition</td>
+        </tr>
+        <tr>
+            <td>3.</td>
+            <td>findIndex()</td>
+            <td>array.findIndex(function name);</td>
+            <td>
+               const ages = [3, 10, 18, 20];
+			   ages.findIndex(checkAge);
+
+				function checkAge(age) {
+				return age > 18;
+				}
+            </td>
+            <td>
+            <br>OUTPUT=><b>3</b></td>
+            <td>The findIndex() method returns the index (position) of the first element that passes a test.</td>
+        </tr>
+        <tr>
+            <td>4.</td>
+            <td>map()</td>
+            <td>array.map(function(value,index,array));</td>
+            <td>
+				const numbers = [65, 44, 12, 4];
+				const newArr = numbers.map(myFunction)
+
+				function myFunction(num) {
+				return num * 10;
+				}
+            </td>
+            <td>
+            <br>OUTPUT=><b>[650,440,120,40]</b></td>
+            <td>Return new array of value</td>
+        </tr>
+        <tr>
+            <td>5.</td>
+            <td>indexOf()</td>
+            <td>array.indexOf(searchElement,fromIndex);</td>
+            <td>
+                const fruits = ["Banana", "Orange", "Apple", "Mango"];
+				let index = fruits.indexOf("Apple");
+            </td><br>
+            <td><br>OUTPUT=><b>2</b></td>
+            <td>Returns the first index of element</td>
+        </tr>
+        <tr>
+            <td>6.</td>
+            <td>findLastIndex()</td>
+            <td>array.name(lastIndexOf(element))</td>
+            <td>
+                const fruits = ["Apple", "Orange", "Apple", "Mango"];
+				let index = fruits.lastIndexOf("Mango");
+            </td><br>
+            <td><br>OUTPUT=><b>3</b></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>7.</td>
+            <td>push()</td>
+            <td>array.push(any element);</td>
+            <td>
+                let array = [1,2,3,4,5];
+				array.push(6,7);
+                console.log(array);
+            </td>
+            <td>
+                <br>OUTPUT=><b>[1,2,3,4,5,6,7]</b>
+            </td>
+            <td>Adds an element at the end of the array</td>
+        </tr>
+        <tr>
+            <td>8.</td>
+            <td>pop()</td>
+            <td>array.pop();</td>
+            <td>
+               let array = [10, 20, 30, 40];
+			    array.pop();
+                console.log(array);
+            </td>
+            <td>
+                <br>OUTPUT=><b>[10,20,30]</b>
+            </td>
+            <td>Removes the last element of the array</td>
+        </tr>
+        <tr>
+            <td>9.</td>
+            <td>shift()</td>
+            <td>array.shift();</td>
+            <td>
+                let array = [10, 20, 30, 40];
+				 array.shift();
+                console.log(array);
+            </td>
+            <td>
+                <br>OUTPUT=><b>[20,30,40]</b>
+            </td>
+            <td>Removes the first element of the array</td>
+        </tr>
+        <tr>
+            <td>10.</td>
+            <td>unshift()</td>
+            <td>array.unshift(any element);</td>
+            <td>
+                let array = [3,4,5];
+				 array.unshift(2);
+                console.log(array);
+            </td>
+            <td>
+                <br>OUTPUT=><b>[2,3,4,5]</b>
+            </td>
+            <td>Add the first element of the array</td>
+        </tr>
+        <tr>
+            <td>11.</td>
+            <td>reduce()</td>
+            <td>array.reduce(function(accumulate,currValue,<br>curIndex,array),initialvalue);</td>
+            <td>
+                let numbers = [1, 2, 3, 4, 5];
+				let add=numbers.reduce(acc,curt)
+					{
+					return acc+curt*2;
+					},10)
+            </td>
+            <td>
+               
+                <br>OUTPUT=><b>40</b>
+            </td>
+            <td> The reduce() method returns a single value: the function's accumulated result.</td>
+        </tr>
+        <tr>
+            <td>12.</td>
+            <td>reverse()</td>
+            <td>array.reverse();</td>
+            <td>
+				let array = [1, 2, 3, 4, 5, 6];
+				console.log(array.reverse());
+            </td>
+            <td>
+                <br>OUTPUT=><b>[6,5,4,3,2,1]</b>
+            </td>
+            <td>Returns the array index values in reverse order.</td>
+        </tr>
+        <tr>
+            <td>13.</td>
+            <td>slice()</td>
+            <td>array.slice(startIndex,endIndex);</td>
+            <td>
+              let array =[10,13,56,54,76];
+			  let result=array.slice(1,3);
+              console.log(result);
+            </td>
+            <td>
+                <br>OUTPUT=><b>[13,56]</b>
+            </td>
+            <td>Return the array element slice the index value</td>
+        </tr>
+        <tr>
+            <td>14.</td>
+            <td>splice()</td>
+            <td>1.array.splice(startIndex,endIndex);<br>
+                2.array.splice(startIndex,deletecount);<br>
+            </td>
+            <td>
+                <br>
+               const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+				fruits.splice(2, 1, "Lemon", "Kiwi");
+            </td>
+            <td><br>
+                <br>OUTPUT=><b>Banana,Orange,Lemon,Kiwi,Mango</b>
+            </td>
+            <td>To add or remove elements from an array-splice</td>
+        </tr>
+        <tr>
+            <td>15.</td>
+            <td>toString()</td>
+            <td>array.toString();</td>
+            <td>
+				const fruits = ["Banana", "Orange", "Apple", "Mango"];
+				let text = fruits.toString();
+			</td>
+            <td><br>
+                <br>OUTPUT=><b>Banana,Orange,Apple,Mango</b>
+            </td>
+            <td>Returns the values as string</td>
+        </tr>
+        <tr>
+            <td>16.</td>
+            <td>toLocaleString()</td>
+            <td>array.toLocaleString(locals,option);</td>
+            <td>
+				const time= new Date();
+				let result = time.toLocaleString();</td>
+            <td><br>
+                <br>OUTPUT=><b>15/3/2023, 9:21:13 pm</b>
+            </td>
+            <td>Returns date as a string</td>
+        </tr>
+    </table>
+</body>
+</html>
